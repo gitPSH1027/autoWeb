@@ -39,7 +39,6 @@
 				<!-- //현재위치 네비게이션 끝 -->				
 				<!-- main content 시작 -->
 				<div class="content_field">
-					<div><h2>문자변환</h2></div>
 					<div><h2>snake case ==> camel case</h2></div>
 					    <textarea name="" id="before" cols="30" rows="10"></textarea>
 					    <button id="change" class="buttons">변환</button>
