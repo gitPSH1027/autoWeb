@@ -69,7 +69,7 @@ public class EgovComUtlController {
 		if (menuNo!=null && !menuNo.equals("")){
 			session.setAttribute("menuNo",menuNo);
 		}
-		
+		System.out.println("dd: "+ egovWhitelist);
 		// 화이트 리스트 처리
 		// whitelist목록에 있는 경우 결과가 true, 결과가 false인경우 FAIL처리
 		if (egovWhitelist.contains(link) == false) {
@@ -78,6 +78,7 @@ public class EgovComUtlController {
 		}
 		// 안전한 경로 문자열로 조치
 		link = EgovWebUtil.filePathBlackList(link);
+		
 		
 		return link;
 	}

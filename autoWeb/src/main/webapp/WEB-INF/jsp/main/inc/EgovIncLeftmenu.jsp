@@ -74,6 +74,11 @@ String menuNo = ((String)session.getAttribute("menuNo")!=null)?(String)session.g
 			</ul> 
 		</li>
 		<% } %>
+        <% if (menuNo.indexOf("6")== 0) {%>
+		<li class="leftmenu_dept01">
+			<a href="javascript:fn_main_headPageMove('61','main/sample_menu/EgovChangeStr')">문자변환</a>
+		</li>
+		<% } %>
 	</ul>
 	</div>
 	<div class="bottom"></div>		
