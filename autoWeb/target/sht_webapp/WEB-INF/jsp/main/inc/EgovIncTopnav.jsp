@@ -40,11 +40,12 @@
 </form>
 
 <ul>
-	<li><a href="#LINK" onclick="javascript:fn_main_headPageMove('11','main/sample_menu/EgovAboutSite')" >사이트소개</a></li>
+	<!-- <li><a href="#LINK" onclick="javascript:fn_main_headPageMove('11','main/sample_menu/EgovAboutSite')" >사이트소개</a></li>
     <li><a href="#LINK" onclick="javascript:fn_main_headPageMove('21','main/sample_menu/EgovProductInfo')" >정보마당</a></li>
     <li><a href="#LINK" onclick="javascript:fn_main_headPageMove('31','main/sample_menu/EgovDownload')" >고객지원</a></li>
-    <li><a href="#LINK" onclick="javascript:fn_main_headPageMove('41','main/sample_menu/EgovChangeStr')" >문자변환</a></li>
-    <li><a href="#LINK" onclick="javascript:fn_main_headPageAction('42','cop/smt/sim/EgovIndvdlSchdulManageWeekList.do')" >알림마당</a></li>
+    <li><a href="#LINK" onclick="javascript:fn_main_headPageAction('42','cop/smt/sim/EgovIndvdlSchdulManageWeekList.do')" >알림마당</a></li> -->
+    <li><a href="#LINK" onclick="javascript:fn_main_headPageMove('61','main/sample_menu/EgovChangeStr')" >문자 변환</a></li>
+    <li><a href="#LINK" onclick="javascript:fn_main_headPageMove('71','main/sample_menu/EgovMakeSql')" >SQL문 생성</a></li>
     <%
        LoginVO loginVO = (LoginVO)session.getAttribute("LoginVO"); 
        if(loginVO != null){ 

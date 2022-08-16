@@ -28,6 +28,7 @@
 		<value>main/sample_menu/EgovQA</value>
 		<value>main/sample_menu/EgovService</value>
 		<value>main/sample_menu/EgovChangeStr</value>
+		<value>main/sample_menu/EgovMakeSql</value>
 	</util:list>
 
 </beans>

@@ -20,7 +20,7 @@ String menuNo = ((String)session.getAttribute("menuNo")!=null)?(String)session.g
 	<div class="top"></div>             
 	<div class="nav_style">
 	<ul>
-	    <% if (menuNo.indexOf("1")== 0) {%>
+	    <%-- <% if (menuNo.indexOf("1")== 0) {%>
 		<li class="leftmenu_dept01">
 			<a href="javascript:fn_main_headPageMove('11','main/sample_menu/EgovAboutSite')">사이트소개</a>
 			<ul>
@@ -73,10 +73,17 @@ String menuNo = ((String)session.getAttribute("menuNo")!=null)?(String)session.g
                 <li class="dept02"><a href="javascript:fn_main_headPageAction('56','cop/bbs/selectBoardList.do?bbsId=BBSMSTR_BBBBBBBBBBBB')">사이트갤러리관리</a></li>
 			</ul> 
 		</li>
-		<% } %>
+		<% } %> --%>
         <% if (menuNo.indexOf("6")== 0) {%>
 		<li class="leftmenu_dept01">
-			<a href="javascript:fn_main_headPageMove('61','main/sample_menu/EgovChangeStr')">문자변환</a>
+			<a href="javascript:fn_main_headPageMove('61','main/sample_menu/EgovChangeStr')">문자변환</a> <br>
+			<a href="javascript:fn_main_headPageMove('71','main/sample_menu/EgovMakeSql')">SQL문 생성</a>
+		</li>
+		<% } %>
+        <% if (menuNo.indexOf("7")== 0) {%>
+		<li class="leftmenu_dept01">
+			<a href="javascript:fn_main_headPageMove('61','main/sample_menu/EgovChangeStr')">문자변환</a> <br>
+			<a href="javascript:fn_main_headPageMove('71','main/sample_menu/EgovMakeSql')">SQL문 생성</a>
 		</li>
 		<% } %>
 	</ul>

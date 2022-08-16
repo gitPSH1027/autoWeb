@@ -4,7 +4,7 @@ import java.util.List;
 
 import egovframework.let.cop.bbs.service.Board;
 import egovframework.let.cop.bbs.service.BoardVO;
-
+import egovframework.let.cop.bbs.service.autoBoardVO;
 import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
 
 import org.springframework.stereotype.Repository;
@@ -225,4 +225,14 @@ public class BBSManageDAO extends EgovAbstractDAO {
     public String getPasswordInf(Board board) throws Exception {
 	return (String)select("BBSManageDAO.getPasswordInf", board);
     }
+
+    /**
+	 * db className을 조회 한다.
+	 * 
+	 * @param Board
+	 * @exception Exception Exception
+	 */
+	public List selectClassNames() {
+		return  (List) select("autoBoardDAO.classList");
+	}
 }

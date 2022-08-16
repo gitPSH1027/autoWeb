@@ -11,6 +11,7 @@ import egovframework.com.cmm.service.FileVO;
 import egovframework.let.cop.bbs.service.Board;
 import egovframework.let.cop.bbs.service.BoardVO;
 import egovframework.let.cop.bbs.service.EgovBBSManageService;
+import egovframework.let.cop.bbs.service.autoBoardVO;
 import egovframework.let.utl.fcc.service.EgovDateUtil;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
@@ -196,4 +197,15 @@ public class EgovBBSManageServiceImpl extends EgovAbstractServiceImpl implements
     public String getPasswordInf(Board board) throws Exception {
 	return bbsMngDAO.getPasswordInf(board);
     }
+
+    /**
+	 * db className을 조회 한다.
+	 * 
+	 * @param Board
+	 * @exception Exception Exception
+	 */
+	@Override
+	public List selectClassNames() throws Exception {
+		return bbsMngDAO.selectClassNames();
+	}
 }

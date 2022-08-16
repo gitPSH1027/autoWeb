@@ -1,5 +1,6 @@
 package egovframework.let.cop.bbs.service;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -97,5 +98,13 @@ public interface EgovBBSManageService {
 	 */
 	public void updateBoardArticle(Board Board)
 	  throws Exception;
+
+	/**
+	 * db className을 조회 한다.
+	 * 
+	 * @param Board
+	 * @exception Exception Exception
+	 */
+	public List selectClassNames() throws Exception;
 
 }

@@ -8,10 +8,13 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import egovframework.com.cmm.EgovWebUtil;
+import egovframework.let.cop.bbs.service.EgovBBSManageService;
+import egovframework.let.cop.bbs.service.autoBoardVO;
 import egovframework.rte.fdl.property.EgovPropertyService;
 
 /**
@@ -44,13 +47,17 @@ public class EgovComUtlController {
 	@Resource(name = "egovPageLinkWhitelist")
     protected List<String> egovWhitelist;
 	
+	@Resource(name = "EgovBBSManageService")
+	protected EgovBBSManageService bbsManageService;
+	
     /**
 	 * JSP 호출작업만 처리하는 공통 함수
+     * @throws Exception 
 	 */
 	@RequestMapping(value="/EgovPageLink.do")
 	public String moveToPage(@RequestParam("link") String linkPage, 
 			HttpSession session, 
-			@RequestParam(value="menuNo", required=false) String menuNo){
+			@RequestParam(value="menuNo", required=false) String menuNo,Model model) throws Exception{
 		
 		String link = linkPage;
 		link = link.replace(";", "");
@@ -79,6 +86,13 @@ public class EgovComUtlController {
 		// 안전한 경로 문자열로 조치
 		link = EgovWebUtil.filePathBlackList(link);
 		
+		System.out.println(menuNo);
+		// SQL생성문 메뉴 조회시만
+		if(menuNo.indexOf("7")==0) {
+			List list = bbsManageService.selectClassNames();
+			model.addAttribute("list",list);
+			System.out.println(list);
+		}
 		
 		return link;
 	}

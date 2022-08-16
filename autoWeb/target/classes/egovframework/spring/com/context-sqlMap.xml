@@ -9,7 +9,7 @@
 	<bean id="sqlMapClient" class="egovframework.rte.psl.orm.ibatis.SqlMapClientFactoryBean">
 		<property name="configLocations">
             <list>
-                <value>classpath:/egovframework/sqlmap/config/${Globals.DbType}/*.xml</value>
+                <value>classpath:/egovframework/sqlmap/config/${Globals.DbType}/*/*.xml</value>
             </list>
         </property>
 		<property name="dataSource" ref="dataSource-${Globals.DbType}"/>
@@ -20,7 +20,7 @@
     <bean id="egov.sqlMapClient" class="egovframework.rte.psl.orm.ibatis.SqlMapClientFactoryBean">
         <property name="configLocations">
             <list>
-                <value>classpath:/egovframework/sqlmap/config/${Globals.DbType}/*.xml</value>
+                <value>classpath:/egovframework/sqlmap/config/${Globals.DbType}/*/*.xml</value>
             </list>
         </property>
         <property name="dataSource" ref="dataSource-${Globals.DbType}"/>

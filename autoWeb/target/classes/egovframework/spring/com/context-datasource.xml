@@ -31,14 +31,14 @@
 	</bean> -->
 	 
 	<!-- mysql -->
-    <bean id="dataSource-mysql" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+    <!-- <bean id="dataSource-mysql" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${Globals.DriverClassName}"/>
         <property name="url" value="${Globals.Url}" />
         <property name="username" value="${Globals.UserName}"/>
         <property name="password" value="${Globals.Password}"/>
     </bean>
     
-    <!-- Oracle -->
+    Oracle
     <bean id="dataSource-oracle" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${Globals.DriverClassName}"/>
         <property name="url" value="${Globals.Url}" />
@@ -46,7 +46,7 @@
         <property name="password" value="${Globals.Password}"/>
     </bean>
     
-    <!-- Altibase -->
+    Altibase
     <bean id="dataSource-altibase" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${Globals.DriverClassName}"/>
         <property name="url" value="${Globals.Url}" />
@@ -54,13 +54,13 @@
         <property name="password" value="${Globals.Password}"/>
     </bean>
 
-    <!-- Tibero -->
+    Tibero
     <bean id="dataSource-tibero" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${Globals.DriverClassName}"/>
         <property name="url" value="${Globals.Url}" />
         <property name="username" value="${Globals.UserName}"/>
         <property name="password" value="${Globals.Password}"/>
-    </bean>
+    </bean> -->
 	
 	<!-- cubrid -->
     <bean id="dataSource-cubrid" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
@@ -69,5 +69,6 @@
         <property name="username" value="${Globals.UserName}"/>
         <property name="password" value="${Globals.Password}"/>
     </bean>
+   
     
 </beans>
